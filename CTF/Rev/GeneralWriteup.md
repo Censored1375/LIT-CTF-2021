@@ -1,0 +1,8 @@
+- EsotEric: reads in 33 chars, xors each char with "]", checks that with each number at the top in the form 16*one + two + three
+- nevergonnaletyoudown: diff in 3  bmp files, for each byte in diff the last bit of the least common byte is a bit of the flag, then you reverse that and xor with 0x68
+- selfish: flag modifies instructions in chk, modifies in the group of sub instructions, xor the  opcode with the xor array to get flag
+- trampoline: jumps to sections of code based on each character you input, dynamic analysis shows that its correct when you jump to the inc rax  instruction, copy out hex from binja and then split on inc rax and count the length of the jumped-over code
+- yarn: strings lol
+- eval: just eval each loop one by one until you reach bottom, which just xors each character by 5 and checks against magic string
+- shuffle: brute force random seed and grep for flag lol
+- loading: check the file, you see that its xoring the flag with an array and incrementing a counter while it goes through that array, looping back around, just see that its doing that and then xor each flag byte with 3 bytes from the xor array
